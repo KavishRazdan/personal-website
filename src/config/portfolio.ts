@@ -215,7 +215,7 @@ export const personalProjects = [
   {
     id: 5,
     title: "Spotify clone",
-    url: "https://spotify-yazdani.netlify.app",
+    url: "https://spotify-kavish.netlify.app/",
     src: spotify,
   },
   {
