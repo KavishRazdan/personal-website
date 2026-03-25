@@ -183,7 +183,7 @@ export const notableProjects = [
       "Built using HTML, Tailwind CSS, and React.js, the platform features a clean UI, modular component structure, and optimized user experience.",
       "Implemented sections like program offerings, service models, community highlights, and a dynamic contact form to effectively communicate the institute’s value proposition and drive user engagement.",
     ],
-  }
+  },
 ];
 
 // Personal Projects
@@ -197,7 +197,7 @@ export const personalProjects = [
   {
     id: 2,
     title: "Amusement Park",
-    url: "https://amusement-park-new.netlify.app",
+    url: "https://amusementbooking.netlify.app/",
     src: funpark,
   },
   {
@@ -382,7 +382,7 @@ export const socialMedia = [
     icon: MessageCircle,
     url: "https://wa.me/+918983791881",
   },
-   {
+  {
     icon: Mail,
     url: `mailto:${personalInfo.email}`,
   },
