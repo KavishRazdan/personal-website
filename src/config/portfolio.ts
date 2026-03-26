@@ -209,7 +209,7 @@ export const personalProjects = [
   {
     id: 4,
     title: "E-commerce clone",
-    url: "https://shoppe-aquib-yazdani.netlify.app",
+    url: "https://kavishrazdan.github.io/lakshya-ply/",
     src: ecommerce,
   },
   {
