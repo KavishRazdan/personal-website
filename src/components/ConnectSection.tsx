@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import { personalInfo, socialMedia } from "../config/portfolio";
+import ContactForm from "./ContactForm";
 
 interface ConnectSectionProps {
   navigate?: (path: string) => void;
@@ -67,51 +68,13 @@ const ConnectSection = forwardRef<HTMLElement, ConnectSectionProps>(
 
             {/* Right - Contact Form */}
             <div className="space-y-6">
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <label className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[14px]">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full bg-[#1a1a1a] rounded-[4px] px-4 py-3 text-white font-['Manrope',sans-serif] text-[16px] focus:outline-none focus:ring-2 focus:ring-[#d3e97a]"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[14px]">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full bg-[#1a1a1a] rounded-[4px] px-4 py-3 text-white font-['Manrope',sans-serif] text-[16px] focus:outline-none focus:ring-2 focus:ring-[#d3e97a]"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[14px]">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full bg-[#1a1a1a] rounded-[4px] px-4 py-3 text-white font-['Manrope',sans-serif] text-[16px] focus:outline-none focus:ring-2 focus:ring-[#d3e97a]"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[14px]">
-                    Message
-                  </label>
-                  <textarea
-                    rows={4}
-                    className="w-full bg-[#1a1a1a] rounded-[4px] px-4 py-3 text-white font-['Manrope',sans-serif] text-[16px] focus:outline-none focus:ring-2 focus:ring-[#d3e97a] resize-none"
-                  />
-                </div>
-              </div>
-
-              <button className="bg-[#d3e97a] rounded-full px-10 py-3 font-['Manrope',sans-serif] font-bold text-[14px] text-neutral-950 uppercase hover:bg-[#c5db6c] transition-colors">
-                Submit
-              </button>
+              <ContactForm
+                labelSize="text-[14px]"
+                inputSize="text-[16px]"
+                textareaRows={4}
+                buttonPadding="px-10 py-3"
+                buttonTextSize="text-[14px]"
+              />
             </div>
           </div>
         </div>
