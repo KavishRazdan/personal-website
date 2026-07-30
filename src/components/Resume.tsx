@@ -16,6 +16,7 @@ import {
 } from "../config/portfolio";
 import { downloadResumeAsPDF } from "../utils/downloadResume";
 import { Helmet } from "react-helmet-async";
+import Footer from "./Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -421,19 +422,7 @@ export default function Resume({ navigate }: ResumeProps) {
         </div>
 
         {/* Footer */}
-        <footer className="py-8 px-6 border-t border-[#484848]">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[14px]">
-              {personalInfo.copyright}
-            </p>
-            <button
-              onClick={() => navigate("/")}
-              className="font-['Manrope',sans-serif] text-[#d3e97a] text-[14px] hover:text-white transition-colors"
-            >
-              Back to Home
-            </button>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );

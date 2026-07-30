@@ -9,6 +9,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import ContactForm from "./ContactForm";
+import Footer from "./Footer";
 import { personalInfo, socialMedia, socialLinks, projects } from "../config/portfolio";
 import { Helmet } from "react-helmet-async";
 
@@ -505,10 +506,6 @@ export default function Portfolio({ navigate }: PortfolioProps) {
                     );
                   })}
                 </div>
-
-                <p className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[16px] pt-8">
-                  {personalInfo.copyright}
-                </p>
               </div>
 
               {/* Right - Contact Form */}
@@ -524,6 +521,9 @@ export default function Portfolio({ navigate }: PortfolioProps) {
             </div>
           </div>
         </section>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </>
   );

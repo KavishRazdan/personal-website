@@ -12,6 +12,7 @@ import {
   socialMedia,
 } from "../config/portfolio";
 import { Helmet } from "react-helmet-async";
+import Footer from "./Footer";
 console.log("notableProjects: ", notableProjects);
 
 gsap.registerPlugin(ScrollTrigger);
@@ -297,33 +298,7 @@ export default function Projects({ navigate }: ProjectsProps) {
         </section>
 
         {/* Footer */}
-        <footer className="py-8 px-6 border-t border-[#484848]">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[14px]">
-              {personalInfo.copyright}
-            </p>
-            <div className="flex gap-4">
-              {socialMedia.map((social, index) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target={social.name !== "Phone" ? "_blank" : undefined}
-                    rel={
-                      social.name !== "Phone"
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
-                    className="hover:opacity-80 transition-opacity"
-                  >
-                    <Icon className="w-4 h-4 text-[#d3e97a]" />
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );

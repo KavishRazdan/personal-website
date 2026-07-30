@@ -13,6 +13,7 @@ import {
   socialMedia,
 } from "../config/portfolio";
 import ConnectSection from "./ConnectSection";
+import Footer from "./Footer";
 import { Helmet } from "react-helmet-async";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -308,6 +309,9 @@ export default function About({ navigate }: AboutProps) {
 
         {/* Let's Connect Section */}
         <ConnectSection ref={connectRef} navigate={navigate} />
+
+        {/* Footer */}
+        <Footer />
       </div>
     </>
   );
