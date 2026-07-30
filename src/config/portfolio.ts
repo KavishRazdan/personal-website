@@ -28,15 +28,7 @@ import {
   MessageCircle,
   Mail,
 } from "lucide-react";
-import idr from "../assets/idr.png";
-import screener from "../assets/screener.png";
-import mm from "../assets/mm.png";
-import adlob from "../assets/adlob.png";
-import funpark from "../assets/funpark.png";
-import ecommerce from "../assets/ecommerce.png";
-import spotify from "../assets/spotify.png";
-import screenr_long from "../assets/screenr_long.png";
-import portfolio from "../assets/kavish-portfolio.png";
+
 // Personal Information
 export const personalInfo = {
   name: "Md Kavish",
@@ -148,86 +140,10 @@ export const education = [
   },
 ];
 
-// Notable Projects
-export const notableProjects = [
-  {
-    id: 1,
-    title: "Screener - Zamzam Capital",
-    role: "Frontend Developer",
-    techStack: [
-      "React.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Chart.js",
-      "REST APIs",
-    ],
-    year: "2025",
-    src: screenr_long,
-    url: "https://screener.zamzam-capital.com/",
-    achievements: [
-      "Developed a dedicated Halal stock screening platform enabling investors to evaluate companies based on Shariah-compliant financial criteria.",
-      "Implemented advanced filtering and screening logic to assess stocks across multiple compliance parameters, providing a streamlined and user-friendly interface for Islamic investment research.",
-      "Created responsive dashboards with intuitive UI/UX for seamless user experience across devices.",
-    ],
-  },
-  {
-    id: 2,
-    title: "IDR - Institute of Digital Risk",
-    role: "Lead Frontend Engineer",
-    techStack: ["javascript", "html", "css"],
-    year: "2026",
-    src: idr,
-    url: "https://idr-kavish.netlify.app/",
-    achievements: [
-      "Designed and developed a modern, responsive website for an industry-led training institute focused on digital and AI risk.",
-      "Built using HTML, Tailwind CSS, and React.js, the platform features a clean UI, modular component structure, and optimized user experience.",
-      "Implemented sections like program offerings, service models, community highlights, and a dynamic contact form to effectively communicate the institute’s value proposition and drive user engagement.",
-    ],
-  },
-];
-
-// Personal Projects
-export const personalProjects = [
-  {
-    id: 1,
-    title: "Portfolio",
-    url: "https://kavish.netlify.app/",
-    src: portfolio,
-  },
-  {
-    id: 2,
-    title: "Amusement Park",
-    url: "https://amusementbooking.netlify.app/",
-    src: funpark,
-  },
-  {
-    id: 3,
-    title: "Memorable Mumbai",
-    url: "https://memorablemumbai.com",
-    src: mm,
-  },
-  {
-    id: 4,
-    title: "E-commerce clone",
-    url: "https://kavishrazdan.github.io/lakshya-ply/",
-    src: ecommerce,
-  },
-  {
-    id: 5,
-    title: "Spotify clone",
-    url: "https://spotify-kavish.netlify.app/",
-    src: spotify,
-  },
-  {
-    id: 6,
-    title: "Screener",
-    url: "https://screener.zamzam-capital.com",
-    src: screener,
-  },
-];
+export * from "./projects";
 
 // Awards
-export const awards = [];
+export const awards: any[] = [];
 
 // Achievements
 export const achievements = [
@@ -237,106 +153,7 @@ export const achievements = [
 ];
 
 // References
-export const references = [];
-
-// Featured Projects
-export const projects = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    category: "Web Development",
-    description:
-      "A full-featured e-commerce platform with cart, checkout, and payment integration.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "ecommerce platform",
-    year: "2023",
-    role: "Full Stack Developer",
-    client: "ShopFast Inc.",
-    tag: "Featured",
-    links: {
-      demo: "https://ecommerce-demo.com",
-      github: "https://github.com/username/ecommerce",
-    },
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    category: "Mobile App",
-    description:
-      "Cross-platform mobile app for task and project management with real-time sync.",
-    technologies: ["Firebase"],
-    image: "task management app",
-    year: "2023",
-    role: "Mobile Developer",
-    client: "ProductivePro",
-    links: {
-      demo: "https://taskapp-demo.com",
-      github: "https://github.com/username/taskapp",
-    },
-  },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    category: "Web Design",
-    description:
-      "Modern, responsive portfolio website with smooth animations and dark mode.",
-    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    image: "portfolio website design",
-    year: "2022",
-    role: "Front-end Developer",
-    links: {
-      demo: "https://portfolio-demo.com",
-      github: "https://github.com/username/portfolio",
-    },
-  },
-  {
-    id: 4,
-    title: "Analytics Dashboard",
-    category: "Data Visualization",
-    description:
-      "Interactive dashboard for visualizing complex data with charts and graphs.",
-    technologies: ["React", "D3.js", "TypeScript"],
-    image: "analytics dashboard",
-    year: "2022",
-    role: "Front-end Developer",
-    client: "DataViz Corp.",
-    links: {
-      demo: "https://analytics-demo.com",
-      github: "https://github.com/username/analytics",
-    },
-  },
-  {
-    id: 5,
-    title: "Social Media App",
-    category: "Full Stack",
-    description:
-      "Social networking platform with posts, comments, and real-time messaging.",
-    technologies: ["React", "GraphQL", "PostgreSQL"],
-    image: "social media interface",
-    year: "2021",
-    role: "Full Stack Developer",
-    client: "ConnectHub",
-    links: {
-      demo: "https://socialmedia-demo.com",
-      github: "https://github.com/username/social",
-    },
-  },
-  {
-    id: 6,
-    title: "Weather Application",
-    category: "API Integration",
-    description:
-      "Beautiful weather app with location-based forecasts and interactive maps.",
-    technologies: ["React", "OpenWeather API", "Mapbox"],
-    image: "weather app interface",
-    year: "2021",
-    role: "Front-end Developer",
-    links: {
-      demo: "https://weather-demo.com",
-      github: "https://github.com/username/weather",
-    },
-  },
-];
+export const references: any[] = [];
 
 // Contact Information for Footer
 export const contactInfo = [

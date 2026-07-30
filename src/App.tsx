@@ -4,28 +4,38 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
 
+const getPageFromPath = (path: string) => {
+  const cleanPath = path.replace(/\/$/, '') || '/';
+  if (cleanPath === '/about') return 'about';
+  if (cleanPath === '/projects') return 'projects';
+  if (cleanPath === '/resume') return 'resume';
+  return 'home';
+};
+
 export default function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState(() => {
+    if (window.location.hash) {
+      const hashPath = window.location.hash.replace(/^#/, '') || '/';
+      return getPageFromPath(hashPath);
+    }
+    return getPageFromPath(window.location.pathname);
+  });
 
   useEffect(() => {
-    // Handle initial route
-    const hash = window.location.hash.slice(1) || '/';
-    if (hash === '/about') setCurrentPage('about');
-    else if (hash === '/projects') setCurrentPage('projects');
-    else if (hash === '/resume') setCurrentPage('resume');
-    else setCurrentPage('home');
+    // If URL has a legacy hash (e.g. /#/projects), clean it up and use clean URL path
+    if (window.location.hash) {
+      const hashPath = window.location.hash.replace(/^#/, '') || '/';
+      const normalizedPath = hashPath.startsWith('/') ? hashPath : `/${hashPath}`;
+      window.history.replaceState(null, '', normalizedPath);
+      setCurrentPage(getPageFromPath(normalizedPath));
+    }
 
-    // Listen for hash changes
-    const handleHashChange = () => {
-      const hash = window.location.hash.slice(1) || '/';
-      if (hash === '/about') setCurrentPage('about');
-      else if (hash === '/projects') setCurrentPage('projects');
-      else if (hash === '/resume') setCurrentPage('resume');
-      else setCurrentPage('home');
+    const handlePopState = () => {
+      setCurrentPage(getPageFromPath(window.location.pathname));
     };
 
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
   // Scroll to top smoothly when page changes
@@ -37,7 +47,11 @@ export default function App() {
   }, [currentPage]);
 
   const navigate = (path: string) => {
-    window.location.hash = path;
+    const targetPath = path.startsWith('/') ? path : `/${path}`;
+    if (window.location.pathname !== targetPath) {
+      window.history.pushState(null, '', targetPath);
+    }
+    setCurrentPage(getPageFromPath(targetPath));
   };
 
   if (currentPage === 'about') {
