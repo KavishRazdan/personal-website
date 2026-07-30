@@ -95,27 +95,65 @@ export default function Portfolio({ navigate }: PortfolioProps) {
   return (
     <>
       <Helmet>
-        <title>Md Kavish - Frontend Developer | Portfolio</title>
+        <title>Md Kavish | Junior Frontend Software Engineer Portfolio</title>
         <meta
           name="description"
-          content="Md Kavish - Frontend Developer specializing in React.js, JavaScript, and responsive web applications."
+          content="Md Kavish is a Junior Frontend Software Engineer specializing in React.js, TypeScript, JavaScript, and Tailwind CSS. Explore frontend web applications, personal projects, and interactive UI engineering."
         />
         <meta
           name="keywords"
-          content="Md Kavish, Frontend Developer, React Developer, JavaScript, Web Developer, Portfolio, Indore India"
+          content="Md Kavish, Junior Frontend Software Engineer, Junior Frontend Developer, React Developer, TypeScript, JavaScript, Web Developer Portfolio, Indore India"
         />
-        <link rel="canonical" href="https://mdkavish.com" />
+        <link rel="canonical" href="https://kavish.netlify.app/" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://kavish.netlify.app/" />
+        <meta
+          property="og:title"
+          content="Md Kavish | Junior Frontend Software Engineer Portfolio"
+        />
+        <meta
+          property="og:description"
+          content="Md Kavish is a Junior Frontend Software Engineer specializing in React.js, TypeScript, JavaScript, and responsive web application development."
+        />
+        <meta property="og:image" content="https://kavish.netlify.app/og-image.jpg" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://kavish.netlify.app/" />
+        <meta
+          name="twitter:title"
+          content="Md Kavish | Junior Frontend Software Engineer Portfolio"
+        />
+        <meta
+          name="twitter:description"
+          content="Md Kavish is a Junior Frontend Software Engineer specializing in React.js, TypeScript, JavaScript, and responsive web application development."
+        />
+        <meta
+          name="twitter:image"
+          content="https://kavish.netlify.app/og-image.jpg"
+        />
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
             name: "Md Kavish",
-            jobTitle: "Frontend Developer",
-            url: "https://mdkavish.com",
+            givenName: "Md Kavish",
+            jobTitle: "Junior Frontend Software Engineer",
+            description:
+              "Junior Frontend Software Engineer focused on building responsive, interactive, and user-centric web applications using React.js, TypeScript, and modern frontend technologies.",
+            url: "https://kavish.netlify.app/",
+            email: "mailto:razdankavish67@gmail.com",
             sameAs: [
               "https://www.linkedin.com/in/kavish-razdan/",
               "https://github.com/KavishRazdan/",
             ],
+            alumniOf: {
+              "@type": "EducationalOrganization",
+              name: "Dr. A.P.J. Abdul Kalam University, Indore",
+            },
             address: {
               "@type": "PostalAddress",
               addressLocality: "Indore",
@@ -124,11 +162,13 @@ export default function Portfolio({ navigate }: PortfolioProps) {
             },
             knowsAbout: [
               "React.js",
-              "JavaScript",
-              "Frontend Development",
-              "Web Development",
-              "HTML",
-              "CSS",
+              "TypeScript",
+              "JavaScript (ES6+)",
+              "Frontend Software Engineering",
+              "Tailwind CSS",
+              "HTML5 & CSS3",
+              "State Management (Zustand, Context API)",
+              "Web Performance Optimization",
             ],
           })}
         </script>
@@ -150,7 +190,7 @@ export default function Portfolio({ navigate }: PortfolioProps) {
                     {personalInfo.name.toUpperCase()}.
                   </h1>
                   <p className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[18px] leading-[1.5] max-w-[540px]">
-                    Frontend Developer. / React.js Expert / Tech Explorer
+                    Junior Frontend Software Engineer / React.js & TypeScript Specialist
                   </p>
                 </div>
 
@@ -210,7 +250,7 @@ export default function Portfolio({ navigate }: PortfolioProps) {
                 <div className="bg-[#c7c7c7] rounded-[16px] w-full max-w-[600px] mx-auto aspect-[6/7] relative overflow-hidden">
                   <ImageWithFallback
                     src={imgPotrait}
-                    alt={personalInfo.name}
+                    alt="Md Kavish - Junior Frontend Software Engineer"
                     className="absolute inset-0 w-full h-full object-cover object-center"
                   />
                 </div>

@@ -103,16 +103,42 @@ export default function About({ navigate }: AboutProps) {
   return (
     <>
       <Helmet>
-        <title>About Md Kavish - Frontend Developer</title>
+        <title>About Md Kavish | Junior Frontend Software Engineer</title>
         <meta
           name="description"
-          content="Learn more about Md Kavish, a Frontend Developer specializing in React.js, JavaScript, and responsive web development."
+          content="Learn about Md Kavish, a Junior Frontend Software Engineer skilled in React.js, TypeScript, JavaScript, Tailwind CSS, and web performance optimization."
         />
         <meta
           name="keywords"
-          content="Md Kavish, About, Frontend Developer, React Developer, JavaScript, Web Developer, Skills, Experience"
+          content="Md Kavish, About Md Kavish, Junior Frontend Software Engineer, React Developer, Frontend Capabilities, Skills, Work Experience, Indore"
         />
-        <link rel="canonical" href="https://mdkavish.com/about" />
+        <link rel="canonical" href="https://kavish.netlify.app/about" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://kavish.netlify.app/about" />
+        <meta
+          property="og:title"
+          content="About Md Kavish | Junior Frontend Software Engineer"
+        />
+        <meta
+          property="og:description"
+          content="Background, capabilities, skills, and work experience of Junior Frontend Software Engineer Md Kavish."
+        />
+        <meta property="og:image" content="https://kavish.netlify.app/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            name: "About Md Kavish",
+            description: "Information about Md Kavish, Junior Frontend Software Engineer.",
+            url: "https://kavish.netlify.app/about",
+            mainEntity: {
+              "@type": "Person",
+              name: "Md Kavish",
+              jobTitle: "Junior Frontend Software Engineer",
+              url: "https://kavish.netlify.app/",
+            },
+          })}
+        </script>
       </Helmet>
       <div className="bg-neutral-950 min-h-screen">
         {/* Navigation */}

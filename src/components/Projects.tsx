@@ -8,6 +8,7 @@ import {
   personalInfo,
   notableProjects,
   personalProjects,
+  projects,
   socialMedia,
 } from "../config/portfolio";
 import { Helmet } from "react-helmet-async";
@@ -43,16 +44,46 @@ export default function Projects({ navigate }: ProjectsProps) {
   return (
     <>
       <Helmet>
-        <title>Projects by Md Kavish - Frontend Developer Portfolio</title>
+        <title>Projects by Md Kavish | Junior Frontend Software Engineer</title>
         <meta
           name="description"
-          content="Explore the projects by Md Kavish, including Institute of Digital Risk, Karo Pitch, and more. Showcasing expertise in React.js, JavaScript, and frontend development."
+          content="Explore web application projects built by Md Kavish, Junior Frontend Software Engineer. Featuring Screener - Zamzam Capital, IDR, CSV - Plot Studio, Vector-shift, and more."
         />
         <meta
           name="keywords"
-          content="Md Kavish, Projects, Portfolio, React Developer, JavaScript, Frontend Developer, Web Development"
+          content="Md Kavish Projects, Junior Frontend Developer Projects, React.js Projects, TypeScript Apps, Screener Zamzam Capital, IDR Institute of Digital Risk, CSV Plot Studio, Vector-shift"
         />
-        <link rel="canonical" href="https://mdkavish.com/projects" />
+        <link rel="canonical" href="https://kavish.netlify.app/projects" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://kavish.netlify.app/projects" />
+        <meta
+          property="og:title"
+          content="Projects by Md Kavish | Junior Frontend Software Engineer"
+        />
+        <meta
+          property="og:description"
+          content="Explore web application projects by Md Kavish featuring React.js, TypeScript, Tailwind CSS, and interactive UI engineering."
+        />
+        <meta property="og:image" content="https://kavish.netlify.app/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Projects by Md Kavish",
+            description: "Portfolio of frontend web development projects by Md Kavish.",
+            url: "https://kavish.netlify.app/projects",
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: projects.map((p, idx) => ({
+                "@type": "ListItem",
+                position: idx + 1,
+                name: p.title,
+                url: p.url,
+                description: p.description,
+              })),
+            },
+          })}
+        </script>
       </Helmet>
       <div className="bg-neutral-950 min-h-screen">
         {/* Navigation */}

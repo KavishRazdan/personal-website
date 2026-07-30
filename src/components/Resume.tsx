@@ -76,16 +76,41 @@ export default function Resume({ navigate }: ResumeProps) {
   return (
     <>
       <Helmet>
-        <title>Md Kavish Resume - Frontend Developer</title>
+        <title>Resume | Md Kavish - Junior Frontend Software Engineer</title>
         <meta
           name="description"
-          content="Download the resume of Md Kavish, Frontend Developer with expertise in React, JavaScript, HTML, and CSS."
+          content="View and download the professional resume of Md Kavish, Junior Frontend Software Engineer. Highlights React.js, TypeScript, frontend internship, education, and projects."
         />
         <meta
           name="keywords"
-          content="Md Kavish, Resume, CV, Frontend Developer, React Developer, JavaScript, Web Developer"
+          content="Md Kavish Resume, Md Kavish CV, Junior Frontend Engineer Resume, React Developer CV, Frontend Developer Experience"
         />
-        <link rel="canonical" href="https://mdkavish.com/resume" />
+        <link rel="canonical" href="https://kavish.netlify.app/resume" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://kavish.netlify.app/resume" />
+        <meta
+          property="og:title"
+          content="Resume | Md Kavish - Junior Frontend Software Engineer"
+        />
+        <meta
+          property="og:description"
+          content="Professional resume and qualifications of Junior Frontend Software Engineer Md Kavish."
+        />
+        <meta property="og:image" content="https://kavish.netlify.app/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "DigitalDocument",
+            name: "Md Kavish Resume",
+            description: "Professional Resume of Md Kavish, Junior Frontend Software Engineer.",
+            url: "https://kavish.netlify.app/resume",
+            author: {
+              "@type": "Person",
+              name: "Md Kavish",
+              jobTitle: "Junior Frontend Software Engineer",
+            },
+          })}
+        </script>
       </Helmet>
       <div className="bg-neutral-950 min-h-screen">
         {/* Navigation */}
