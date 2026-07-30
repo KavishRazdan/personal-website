@@ -54,6 +54,48 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    title: "Vector-shift",
+    type: ["notable", "featured"],
+    role: "Frontend Engineer",
+    client: "Personal Project",
+    techStack: ["React.js", "TypeScript", "Tailwind CSS", "JavaScript"],
+    year: "2026",
+    src: vectorshift,
+    url: "https://vectorshiftpipeline.netlify.app/",
+    description:
+      "An interactive visual workflow & pipeline builder web application designed for constructing, configuring, and connecting modular nodes into execution graphs.",
+    achievements: [
+      "Architected a visual AI pipeline builder application that allows users to construct, connect, and configure node-based workflow graphs interactively.",
+      "Developed modular custom node components and dynamic state handlers in React.js & TypeScript for seamless node linking and canvas interactions.",
+      "Implemented intuitive user feedback, smooth UI animations, and structured graph state serialization to ensure scalable pipeline configuration.",
+    ],
+  },
+   {
+    id: 3,
+    title: "CSV - Plot Studio",
+    type: ["notable", "featured"],
+    role: "Frontend Engineer",
+    client: "Personal Project",
+    techStack: [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Chart.js",
+      "JavaScript",
+    ],
+    year: "2026",
+    src: csv,
+    url: "https://csv-plot.netlify.app/",
+    description:
+      "An interactive web-based data visualization platform that allows users to upload CSV datasets, parse tabular data instantly, and generate customizable charts and analytical plots in real time.",
+    achievements: [
+      "Engineered an interactive CSV visualization studio enabling instant parsing, filtering, and real-time chart generation for complex tabular datasets.",
+      "Integrated Chart.js and dynamic data transformation pipelines with React.js & TypeScript, allowing users to customize plot axes, chart types, and visual themes.",
+      "Designed a responsive, low-latency UI using Tailwind CSS, optimizing client-side memory usage and render performance when processing large CSV files.",
+    ],
+  },
+  {
+    id: 4,
     title: "IDR - Institute of Digital Risk",
     type: ["featured", "notable"],
     role: "Lead Frontend Engineer",
@@ -70,8 +112,10 @@ export const projects: Project[] = [
       "Implemented sections like program offerings, service models, community highlights, and a dynamic contact form to effectively communicate the institute’s value proposition and drive user engagement.",
     ],
   },
+  
+ 
   {
-    id: 3,
+    id: 5,
     title: "Memorable Mumbai",
     type: ["featured", "personal"],
     role: "Frontend Developer",
@@ -86,48 +130,8 @@ export const projects: Project[] = [
       "A comprehensive travel and tourism website showcasing the vibrant culture, iconic landmarks, and hidden gems of Mumbai.",
     ],
   },
-  {
-    id: 4,
-    title: "CSV - Plot Studio",
-    type: ["notable", "featured"],
-    role: "Frontend Engineer",
-    client: "Personal Project",
-    techStack: [
-      "JavaScript",
-      "React.js",
-      "Typescript",
-      "Tailwind CSS",
-      "Chart.js",
-    ],
-    year: "2026",
-    src: csv,
-    url: "https://csv-plot.netlify.app/",
-    description:
-      "Designed and developed a web-based CSV visualization studio for plotting tabular data.",
-    achievements: [
-      "Designed and developed a modern, responsive interface for plotting tabular CSV data.",
-      "Built using HTML, Tailwind CSS, and React.js, featuring interactive data parsing and dynamic charts.",
-      "Optimized rendering and user experience for large dataset file uploads.",
-    ],
-  },
-  {
-    id: 5,
-    title: "Vector-shift",
-    type: ["notable"],
-    role: "Frontend Engineer",
-    client: "Personal Project",
-    techStack: ["JavaScript", "React.js", "Typescript", "Tailwind"],
-    year: "2026",
-    src: vectorshift,
-    url: "https://vectorshiftpipeline.netlify.app/",
-    description:
-      "Interactive frontend application with modular component architecture and rich visual design.",
-    achievements: [
-      "Designed and developed a modern, responsive website with clean component structure.",
-      "Built using HTML, Tailwind CSS, and React.js with performance optimizations.",
-      "Implemented smooth interaction flows and state management.",
-    ],
-  },
+  
+ 
   {
     id: 6,
     title: "Portfolio",
