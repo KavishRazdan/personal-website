@@ -9,6 +9,7 @@ import ecommerce from "../assets/ecommerce.png";
 import spotify from "../assets/spotify.png";
 import screenr_long from "../assets/screenr_long.png";
 import portfolio from "../assets/kavish-portfolio.png";
+import sprintdesk from "../assets/sprintdesk.png";
 
 export interface Project {
   id: number;
@@ -30,6 +31,31 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: "SprintDesk",
+    type: ["featured", "notable"],
+    role: "Frontend Engineer",
+    client: "Personal Project",
+    techStack: [
+      "React 19",
+      "TypeScript",
+      "Zustand",
+      "TanStack Query",
+      "Tailwind CSS",
+      "Vite",
+      "dnd-kit",
+    ],
+    year: "2026",
+    src: sprintdesk,
+    url: "https://sprintdesk-kavish.netlify.app/login",
+    description:
+      "Engineered an enterprise-grade Sprint Management SaaS dashboard with React 19, TypeScript (strict mode), and Vite, featuring authentication, Kanban board, and analytics modules. Built a drag-and-drop Kanban board using dnd-kit with 4-column workflow, action-history stack, and full undo/redo support for task state changes.",
+    achievements: [
+      "Engineered an enterprise-grade Sprint Management SaaS dashboard with React 19, TypeScript (strict mode), and Vite, featuring authentication, Kanban board, and analytics modules.",
+      "Built a drag-and-drop Kanban board using dnd-kit with 4-column workflow, action-history stack, and full undo/redo support for task state changes.",
+    ],
+  },
+  {
+    id: 2,
     title: "Screener - Zamzam Capital",
     type: ["featured", "notable"],
     role: "Frontend Developer",
@@ -53,7 +79,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Vector-shift",
     type: ["notable", "featured"],
     role: "Frontend Engineer",
@@ -71,7 +97,7 @@ export const projects: Project[] = [
     ],
   },
    {
-    id: 3,
+    id: 4,
     title: "CSV - Plot Studio",
     type: ["notable", "featured"],
     role: "Frontend Engineer",
@@ -95,7 +121,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "IDR - Institute of Digital Risk",
     type: ["featured", "notable"],
     role: "Lead Frontend Engineer",
@@ -115,7 +141,7 @@ export const projects: Project[] = [
   
  
   {
-    id: 5,
+    id: 6,
     title: "Memorable Mumbai",
     type: ["featured", "personal"],
     role: "Frontend Developer",
@@ -133,7 +159,7 @@ export const projects: Project[] = [
   
  
   {
-    id: 6,
+    id: 7,
     title: "Portfolio",
     type: ["personal"],
     role: "Frontend Developer",
@@ -146,7 +172,7 @@ export const projects: Project[] = [
       "Modern responsive portfolio website showcasing developer projects and skills.",
   },
   {
-    id: 7,
+    id: 8,
     title: "Amusement Park",
     type: ["personal"],
     role: "Frontend Developer",
@@ -159,7 +185,7 @@ export const projects: Project[] = [
       "Ticket booking and attraction web application for amusement park visitors.",
   },
   {
-    id: 8,
+    id: 9,
     title: "E-commerce clone",
     type: ["personal"],
     role: "Frontend Developer",
@@ -172,7 +198,7 @@ export const projects: Project[] = [
       "Responsive e-commerce store clone with product catalog and shopping cart UI.",
   },
   {
-    id: 9,
+    id: 10,
     title: "Spotify clone",
     type: ["personal"],
     role: "Frontend Developer",
@@ -185,7 +211,7 @@ export const projects: Project[] = [
       "Spotify music player UI clone with custom playback interfaces and playlist views.",
   },
   {
-    id: 10,
+    id: 11,
     title: "Screener",
     type: ["personal"],
     role: "Frontend Developer",
