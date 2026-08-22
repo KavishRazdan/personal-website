@@ -10,10 +10,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import ContactForm from "./ContactForm";
 import Footer from "./Footer";
-import { personalInfo, socialMedia, socialLinks, projects } from "../config/portfolio";
+import { personalInfo, socialMedia, socialLinks, projects, workExperience } from "../config/portfolio";
 import { Helmet } from "react-helmet-async";
-
-gsap.registerPlugin(ScrollTrigger);
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,6 +23,7 @@ export default function Portfolio({ navigate }: PortfolioProps) {
   const heroRef = useRef(null);
   const projectsRef = useRef(null);
   const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
   const contactRef = useRef(null);
 
   useEffect(() => {
@@ -69,6 +68,22 @@ export default function Portfolio({ navigate }: PortfolioProps) {
         ease: "power3.out",
         scrollTrigger: {
           trigger: aboutCurrentRef,
+          start: "top 80%",
+          end: "top 50%",
+          toggleActions: "play none none none",
+        },
+      });
+    }
+
+    const experienceCurrentRef = experienceRef.current;
+    if (experienceCurrentRef) {
+      gsap.from(experienceCurrentRef, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: experienceCurrentRef,
           start: "top 80%",
           end: "top 50%",
           toggleActions: "play none none none",
@@ -443,6 +458,54 @@ export default function Portfolio({ navigate }: PortfolioProps) {
                   </span>
                   <div className="h-[2px] w-full bg-[#d3e97a]" />
                 </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="border-t border-[#484848]" />
+        </div>
+
+        {/* Experience Section */}
+        <section ref={experienceRef} id="experience" className="py-20 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div>
+                <h2 className="text-[64px] lg:text-[76px] text-white leading-[0.9] uppercase">
+                  My Experience
+                </h2>
+              </div>
+
+              <div className="space-y-12">
+                {workExperience.map((exp) => (
+                  <div key={exp.id} className="space-y-4">
+                    <div className="flex justify-between items-start flex-wrap gap-2">
+                      <div>
+                        <h3 className="font-['Manrope',sans-serif] text-white text-[24px] font-semibold">
+                          {exp.title}
+                        </h3>
+                        {exp.company && (
+                          <p className="font-['Manrope',sans-serif] text-[#d3e97a] text-[18px]">
+                            {exp.company}
+                          </p>
+                        )}
+                      </div>
+                      <span className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[15px] bg-[#1a1a1a] px-4 py-1.5 rounded-full border border-[#484848]">
+                        {exp.period}
+                      </span>
+                    </div>
+                    <ul className="space-y-3 font-['Manrope',sans-serif] text-[#c7c7c7] text-[16px] leading-[1.6]">
+                      {exp.responsibilities.map((resp, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <span className="text-[#d3e97a] mt-2 size-2 rounded-full bg-[#d3e97a] flex-shrink-0" />
+                          <span>{resp}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

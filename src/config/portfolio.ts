@@ -112,14 +112,15 @@ export const skills = {
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Developer Intern",
+    title: "Frontend Developer",
     company: "SimplifyNote",
     location: "Remote",
-    period: "Summer 2024 (3 Months)",
+    period: "July 2024 - August 2025",
     responsibilities: [
-      "Built and improved UI of internal dashboards and landing pages.",
-      "Collaborated with team using Git and version control workflows.",
-      "Gained experience in responsive web design, debugging, and optimization.",
+      "Engineered scalable and responsive UI components using React.js and Tailwind CSS, improving page load performance by 30%",
+      "Optimized API integration and state management, reducing data-fetch latency by 25%",
+      "Collaborated in an Agile environment using Git workflows, reducing UI defects by 40% across releases",
+      "Enhanced cross-browser and cross-device compatibility, supporting 10+ screen sizes with consistent UX",
     ],
   },
 ];
