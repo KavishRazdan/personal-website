@@ -355,7 +355,7 @@ export const downloadResumeAsPDF = () => {
     <div class="section">
       <div class="section-title">Profile</div>
       <div class="section-content">
-        Software Engineer specializing in AI Web Development and Robotics with ${experienceText} of experience building high-performance web applications and intelligent systems. Proficient in React, JavaScript (ES6+), AI model integration, and robotics interface design, with a strong focus on optimizing user experience and real-time performance. Adept at developing scalable, responsive interfaces and working at the intersection of AI, robotics, and modern web frameworks. Collaborative team player experienced in Agile environments, consistently delivering user-centric solutions.
+        AI Web Developer and Robotics specialist with ${experienceText} of experience building high-performance web applications and intelligent systems. Proficient in React, JavaScript (ES6+), AI model integration, and robotics interface design, with a strong focus on optimizing user experience and real-time performance. Adept at developing scalable, responsive interfaces and working at the intersection of AI, robotics, and modern web frameworks. Collaborative team player experienced in Agile environments, consistently delivering user-centric solutions.
       </div>
     </div>
 

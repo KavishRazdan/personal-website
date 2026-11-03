@@ -33,7 +33,7 @@ import {
 export const personalInfo = {
   name: "Md Kavish",
   displayName: "Md Kavish", // For navbar/logo
-  title: "AI Web Development & Robotics",
+  title: "AI Web Developer and Robotics",
   tagline: "an AI Web Developer & Robotics Specialist",
   location: "Bangalore, India",
   email: "razdankavish67@gmail.com",
@@ -112,7 +112,7 @@ export const skills = {
 export const workExperience = [
   {
     id: 1,
-    title: "AI Web Development and Robotics",
+    title: "AI Web Developer and Robotics",
     company: "Adsafe Solutions",
     location: "Bangalore, India",
     period: "November 2026 - Present",

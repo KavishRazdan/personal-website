@@ -206,7 +206,7 @@ export default function Portfolio({ navigate }: PortfolioProps) {
                     {personalInfo.name.toUpperCase()}.
                   </h1>
                   <p className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[18px] leading-[1.5] max-w-[540px]">
-                    AI Web Development & Robotics Engineer / Modern Web Specialist
+                    AI Web Developer & Robotics / Modern Web Specialist
                   </p>
                 </div>
 
