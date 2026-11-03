@@ -33,9 +33,9 @@ import {
 export const personalInfo = {
   name: "Md Kavish",
   displayName: "Md Kavish", // For navbar/logo
-  title: "Frontend Developer",
-  tagline: "a Frontend Developer",
-  location: "Indore, India",
+  title: "AI Web Development & Robotics",
+  tagline: "an AI Web Developer & Robotics Specialist",
+  location: "Bangalore, India",
   email: "razdankavish67@gmail.com",
   phone: "+91 8983791881",
   copyright: `© ${new Date().getFullYear()} Md Kavish`,
@@ -51,9 +51,9 @@ export const socialLinks = {
 
 // About Me
 export const aboutMe = {
-  intro: `Passionate Frontend Developer Focused on Responsive Web Applications`,
+  intro: `Passionate Developer Specializing in AI Web Development, Robotics, and Scalable Applications`,
 
-  background: `Frontend Developer with a strong focus on building responsive and interactive web applications. Skilled in HTML, CSS, Tailwind CSS, JavaScript, and React.js, with a passion for creating clean, user-friendly interfaces. Adept at applying design thinking and problem-solving to deliver high-quality, scalable frontend solutions.`,
+  background: `Developer working at the forefront of AI Web Development and Robotics, focused on building intelligent web applications, modern responsive interfaces, and robotics control systems. Skilled in integrating AI/ML models with web frontends, developing real-time interactive dashboards, and engineering robust software architectures. Passionate about applying problem-solving and innovation to deliver cutting-edge digital experiences.`,
 
   philosophy: ``,
 
@@ -112,6 +112,19 @@ export const skills = {
 export const workExperience = [
   {
     id: 1,
+    title: "AI Web Development and Robotics",
+    company: "Adsafe Solutions",
+    location: "Bangalore, India",
+    period: "November 2026 - Present",
+    responsibilities: [
+      "Architecting and developing AI-powered web applications and integrating intelligent models into responsive interfaces.",
+      "Building robotics control dashboards, real-time telemetry systems, and interactive hardware-software monitoring tools.",
+      "Optimizing performance, reducing latency in API and real-time data streams, and enhancing cross-platform responsiveness.",
+      "Collaborating in multidisciplinary engineering workflows, driving innovation across AI, robotics, and modern web frameworks.",
+    ],
+  },
+  {
+    id: 2,
     title: "Frontend Developer",
     company: "SimplifyNote",
     location: "Remote",

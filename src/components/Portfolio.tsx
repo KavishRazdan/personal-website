@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import ContactForm from "./ContactForm";
 import Footer from "./Footer";
-import { personalInfo, socialMedia, socialLinks, projects, workExperience } from "../config/portfolio";
+import { personalInfo, socialMedia, socialLinks, projects, workExperience, aboutMe } from "../config/portfolio";
 import { Helmet } from "react-helmet-async";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -206,7 +206,7 @@ export default function Portfolio({ navigate }: PortfolioProps) {
                     {personalInfo.name.toUpperCase()}.
                   </h1>
                   <p className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[18px] leading-[1.5] max-w-[540px]">
-                    Junior Frontend Software Engineer / React.js & TypeScript Specialist
+                    AI Web Development & Robotics Engineer / Modern Web Specialist
                   </p>
                 </div>
 
@@ -440,12 +440,10 @@ export default function Portfolio({ navigate }: PortfolioProps) {
               <div className="space-y-8">
                 <div className="space-y-4">
                   <p className="font-['Manrope',sans-serif] text-[32px] text-white leading-[1.4]">
-                    I am Frontend Developer, with deep expertise in React.js
+                    {aboutMe.intro}
                   </p>
                   <p className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[18px] leading-[1.5]">
-                    When I’m not coding, you’ll find me playing cricket,
-                    practicing photography, or spending quality time with my
-                    family. Always learning, always curious.
+                    Specializing in AI Web Development, Robotics, and modern web architectures. When I’m not coding, you’ll find me exploring new technologies, playing cricket, or spending quality time with my family. Always learning, always curious.
                   </p>
                 </div>
 

@@ -182,12 +182,11 @@ export default function Resume({ navigate }: ResumeProps) {
                   </h2>
                   <p className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[13px] leading-[1.6]">
                     Final-year B.E. Computer Science student at Dr. A.P.J. Abdul
-                    Kalam University, Indore. Passionate about building responsive,
-                    interactive web applications. Skilled in HTML, CSS, Tailwind,
-                    JavaScript, and React.js. Seeking a Frontend Developer role to
-                    apply creativity, design thinking, and problem-solving skills.
+                    Kalam University, Indore. Passionate about AI Web Development,
+                    robotics, and interactive web applications. Skilled in modern
+                    frontend frameworks, AI integrations, and intelligent systems.
                     Adept at developing scalable, responsive interfaces and working
-                    with modern frontend tools.
+                    at the intersection of AI, robotics, and web technologies.
                   </p>
                 </div>
 
