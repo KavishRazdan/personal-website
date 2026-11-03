@@ -181,7 +181,7 @@ export default function Resume({ navigate }: ResumeProps) {
                     Profile
                   </h2>
                   <p className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[13px] leading-[1.6]">
-                    Final-year B.E. Computer Science student at Dr. A.P.J. Abdul
+                    B.E. Computer Science graduate (passed out in 2026) from Dr. A.P.J. Abdul
                     Kalam University, Indore. Passionate about AI Web Development,
                     robotics, and interactive web applications. Skilled in modern
                     frontend frameworks, AI integrations, and intelligent systems.

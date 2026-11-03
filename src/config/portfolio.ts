@@ -144,7 +144,7 @@ export const education = [
     id: 1,
     institution: "Dr. A.P.J. Abdul Kalam University, Indore",
     degree: "B.E. in Computer Science",
-    period: "2023 - 2026 (Ongoing)",
+    period: "2023 - 2026 (Passed out in 2026)",
   },
   {
     id: 2,
