@@ -203,7 +203,7 @@ export default function Portfolio({ navigate }: PortfolioProps) {
                   <h1 className="text-[80px] lg:text-[101px] leading-[0.9] text-white">
                     HI, I AM
                     <br />
-                    {personalInfo.name.toUpperCase()}.
+                    KAVISH.
                   </h1>
                   <p className="font-['Manrope',sans-serif] text-[#c7c7c7] text-[18px] leading-[1.5] max-w-[540px]">
                     AI Web Developer & Robotics / Modern Web Specialist
