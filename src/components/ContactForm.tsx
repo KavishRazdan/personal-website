@@ -1,5 +1,5 @@
 import { forwardRef, useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs removed - using backend API
 import { toast } from "react-toastify";
 import { Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 
@@ -55,43 +55,43 @@ const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(
       setIsSending(true);
       setStatus({ type: null, message: "" });
 
-      try {
-        await emailjs.sendForm(
-          SERVICE_ID,
-          TEMPLATE_ID,
-          formRef.current,
-          PUBLIC_KEY
-        );
-
-        setIsSending(false);
-        setStatus({
-          type: "success",
-          message:
-            "Thank you! Your message has been sent successfully. I'll get back to you soon!",
-        });
-        setFormData({ name: "", email: "", message: "" });
-        formRef.current.reset();
-
-        toast.success("Message sent successfully!", {
-          position: "top-right",
-          autoClose: 5000,
-          theme: "dark",
-        });
-      } catch (error: any) {
-        console.error("EmailJS submission error:", error);
-        setIsSending(false);
-        setStatus({
-          type: "error",
-          message:
-            "Failed to send message. Please try again or email me directly at razdankavish67@gmail.com.",
-        });
-
-        toast.error("Failed to send message. Please try again.", {
-          position: "top-right",
-          autoClose: 5000,
-          theme: "dark",
-        });
-      }
+        try {
+          const response = await fetch(`${import.meta.env.VITE_BACKEND_URL || 'http://localhost:5001'}/api/contact`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
+          });
+          if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || 'Failed to send');
+          }
+          setIsSending(false);
+          setStatus({
+            type: "success",
+            message:
+              "Thank you! Your message has been sent successfully. I'll get back to you soon!",
+          });
+          setFormData({ name: "", email: "", message: "" });
+          formRef.current?.reset();
+          toast.success("Message sent successfully!", {
+            position: "top-right",
+            autoClose: 5000,
+            theme: "dark",
+          });
+        } catch (error: any) {
+          console.error("Backend submission error:", error);
+          setIsSending(false);
+          setStatus({
+            type: "error",
+            message:
+              "Failed to send message. Please try again.",
+          });
+          toast.error("Failed to send message. Please try again.", {
+            position: "top-right",
+            autoClose: 5000,
+            theme: "dark",
+          });
+        }
     };
 
     return (
